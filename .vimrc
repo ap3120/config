@@ -1,18 +1,38 @@
-set nocompatible
+"setting up .vimrc
+"1) installation of vim plug
+"sudo apt install git
+"create the following folders:
+"mkdir ~/.vim ~/.vim/autoload ~/.vim/backup ~/.vim/color ~/.vim/plugged
+"cd .vim/autoload/
+"create the file plug.vim and copy the code from https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"in the .vimrc run the following
+":source %
+":PlugInstall
+
+"2) installation of Vundle
+"sudo apt install build-essential cmake python3-dev
+"cd .vim/
+"mkdir bundle
+"git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"copy the YouCompleteMe folder from https://github.com/ycm-core/YouCompleteMe
+"cd YouCompleteMe/
+"python3 install.py --clangd-completer
+"python3 install.py --all
+
 filetype off
 
+syntax on "check what this does
+
 set rtp+=~/.vim/bundle/Vundle.vim
-
-syntax on
-
-set noerrorbells
+set nocompatible
+set background=dark
+set belloff=all
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set number
 set smartindent
 set incsearch
-
 
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
@@ -31,26 +51,23 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nathanaelkane/vim-indent-guides'
 call vundle#end()
-
 colorscheme gruvbox
-set background=dark
 
 if executable('rg')
     let g:rg_derive_root='true'
 endif
+
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:netrw_browse_split=2
 let g:netrw_banner=0
 let g:netrw_winsize=25
-
-let g:ctrlp_use_caching=0
-let mapleader = " "
-"nnoremap <leader>t :wincmd v<bar> :Ex <bar> :vertical resize 20<CR>
-nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>t :NERDTreeToggle<CR>
-
 let NERDTreeShowHidden=1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level=1
 let g:indent_guides_guide_size=1
+let g:ctrlp_use_caching=0
+let mapleader = " "
+
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
