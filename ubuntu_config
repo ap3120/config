@@ -2,4 +2,4 @@ echo press impécr syst to boot from USB
 gnome-extensions list
 gnome-extensions disable ubuntu-dock@ubuntu.com
 sudo apt update
-sudo apt install python3 vim libreoffice usb-creator-gtk git curl
+sudo apt install python3 pyhton3-pip vim vim-gtk libreoffice usb-creator-gtk git npm curl
