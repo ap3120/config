@@ -11,12 +11,12 @@
 
 "2) installation of Vundle
 "sudo apt install build-essential cmake python3-dev
+"apt install mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre npm
 "cd .vim/
-"mkdir bundle
-"git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-"copy the YouCompleteMe folder from https://github.com/ycm-core/YouCompleteMe
+"mkdir bundle && cd bundle/
+"git clone https://github.com/gmarik/Vundle.vim.git
+"git clone https://github.com/ycm-core/YouCompleteMe
 "cd YouCompleteMe/
-"python3 install.py --clangd-completer
 "python3 install.py --all
 
 filetype off
