@@ -10,14 +10,13 @@
 ":PlugInstall
 
 "2) installation of Vundle
-"sudo apt install build-essential cmake python3-dev
-"apt install mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre npm
 "cd .vim/
 "mkdir bundle && cd bundle/
 "git clone https://github.com/gmarik/Vundle.vim.git
 "git clone https://github.com/ycm-core/YouCompleteMe
-"cd YouCompleteMe/
-"python3 install.py --all
+"Follow the installation instruction from the YouCompleteMe github repo
+
+"To copy from vim to clipboard: sudo apt install vim-gtk
 
 filetype off
 
