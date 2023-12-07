@@ -10,10 +10,10 @@ echo "${CYAN}${BOLD}\nInstalling node version manager\n"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 source ~/.bashrc
 
-echo "${CYAN}${BOLD}\ninstalling cargo\n"
+echo "${CYAN}${BOLD}\nInstalling cargo\n"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-echo "${CYAN}${BOLD}\ninstalling neovim\n"
+echo "${CYAN}${BOLD}\nInstalling neovim\n"
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 sudo chmod u+x nvim.appimage
 #./nvim.appimage
@@ -24,10 +24,13 @@ sudo chmod u+x nvim.appimage
 echo 'export PATH="~/squashfs-root/usr/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
-echo "${CYAN}${BOLD}\ninstalling lunarvim\n"
+echo "${CYAN}${BOLD}\nInstalling lunarvim\n"
 LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
-echo 'export PATH="~/.local/bin:$PATH"' >> .bashrc
+echo 'export PATH="~/.local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
+
+curl -O https://raw.githubusercontent.com/ap3120/config/master/config.lua
+mv ~/config.lua ~/.config/lvim/
 
 git clone https://github.com/ronniedroid/getnf.git
 cd getnf
@@ -48,7 +51,7 @@ getnf
 #cd ~/.vim/bundle/YouCompleteMe
 #python3 install.py --all
 
-echo "${CYAN}${BOLD}\ninstalling maven\n"
+echo "${CYAN}${BOLD}\nInstalling maven\n"
 wget -c https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
 tar -xvf apache-maven-3.9.6-bin.tar.gz
 echo 'JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"' >> ~/.bashrc # to fix, may not be java-17

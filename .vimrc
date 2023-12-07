@@ -1,23 +1,3 @@
-"setting up .vimrc
-"1) installation of vim plug
-"sudo apt install git
-"create the following folders:
-"mkdir ~/.vim ~/.vim/autoload ~/.vim/backup ~/.vim/color ~/.vim/plugged
-"cd .vim/autoload/
-"create the file plug.vim and copy the code from https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"in the .vimrc run the following
-":source %
-":PlugInstall
-
-"2) installation of Vundle
-"cd .vim/
-"mkdir bundle && cd bundle/
-"git clone https://github.com/gmarik/Vundle.vim.git
-"git clone https://github.com/ycm-core/YouCompleteMe
-"Follow the installation instruction from the YouCompleteMe github repo
-
-"To copy from vim to clipboard: sudo apt install vim-gtk
-
 filetype off
 
 syntax on "check what this does
